@@ -94,6 +94,7 @@ div#header #title {
 
 	background-image: var(--title-gradient);
 	background-clip: text;
+	-webkit-background-clip: text; /* For chromium */
 
 	color: var(--title-colour);
 
