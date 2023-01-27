@@ -20,6 +20,6 @@ div.content-img > span {
 
 	font-size: 1.5em;
 
-	color: white;
-	text-shadow: 0 0 5px #0004;
+	color: var(--main-text);
+	/* text-shadow: 0 0 5px #0004; */
 }
