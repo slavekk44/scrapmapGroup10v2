@@ -1,3 +1,4 @@
+// Set up theming and other event listeners
 document.addEventListener('DOMContentLoaded', () => {
 	// Load theme
 	let theme = localStorage.getItem('theme');
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+// Add event listener for sidebar
 document.addEventListener('DOMContentLoaded', () => {
 	let sidebarOpen = document.getElementById('sidebar-open');
 	let sidebar = document.getElementById('sidebar');
@@ -53,11 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!sidebar.style.width) sidebar.style.width = '0';
 
 	sidebarOpen.addEventListener('click', () => {
-		// console.log(sidebar.style.width);
 		console.log(compStyle.getPropertyValue('--sidebar-width'));
 		if (sidebar.style.width == '0px')
 			sidebar.style.width = compStyle.getPropertyValue('--sidebar-width');
 		else
 			sidebar.style.width = '0';
 	});
- });
+});
