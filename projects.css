@@ -3,7 +3,7 @@
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-column-gap: 4%;
-	grid-row-gap: 2%;
+	grid-row-gap: 5%;
 }
 
 div.content-img > img {
@@ -11,9 +11,10 @@ div.content-img > img {
 	display: block;
 }
 div.content-img > span {
-	position: absolute;
+	/* Uncomment for text over image instead of below */
+	/* position: absolute;
 	top: 0;
-	left: 0;
+	left: 0; */
 	display: block;
 	padding: 10px 15px;
 
