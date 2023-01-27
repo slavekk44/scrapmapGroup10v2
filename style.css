@@ -21,6 +21,8 @@ body, body.dark {
 	--title-hover: #fff8;
 	--toggle-bg: #666;
 	--toggle-slider: #ccc;
+	--title-colour: #0000; /* Must be fully transparent for gradient */
+	--title-gradient: linear-gradient(to right, #afa, #aaf);
 
 	/* Element Dimensions */
 	--sidebar-width: 240px;
@@ -42,6 +44,7 @@ body.light {
 	--title-hover: #0007;
 	--toggle-bg: #aaa;
 	--toggle-slider: #666;
+	--title-gradient: linear-gradient(to right, #f00, #00f);
 }
 
 * {
@@ -88,6 +91,11 @@ div#header #title {
 	font-weight: bold;
 
 	transition: text-shadow 0.2s ease-in;
+
+	background-image: var(--title-gradient);
+	background-clip: text;
+
+	color: var(--title-colour);
 
 	cursor: pointer;
 }
