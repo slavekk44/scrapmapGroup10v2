@@ -1,0 +1,222 @@
+/* Main Stylesheet for the whole website */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Variables */
+body, body.dark {
+	/* Background Colours */
+	--main-bg: #222;
+	--header-bg: #333d;
+	--header-bg-blur: 25px;
+	--sidebar-bg: #111d;
+	--sidebar-hover-bg: white;
+	--sidebar-bg-blur: 25px;
+
+	/* Element Colours */
+	--main-text: white;
+	--inverse-text: black;
+	--text-hover: #ccc;
+	--title-hover: #fff8;
+	--toggle-bg: #666;
+	--toggle-slider: #ccc;
+
+	/* Element Dimensions */
+	--sidebar-width: 240px;
+
+	/* Animation Timing */
+	--sidebar-appear: 0.2s;
+
+	/* Define other colours/sizes here */
+}
+body.light {
+	--main-bg: white;
+	--header-bg: #dededea0;
+	--sidebar-bg: #d0d0d090;
+	--sidebar-hover-bg: black;
+
+	--main-text: black;
+	--inverse-text: white;
+	--text-hover: #555;
+	--title-hover: #0007;
+	--toggle-bg: #aaa;
+	--toggle-slider: #666;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--main-bg);
+	color:  var(--main-text);
+
+	font-family: "Inter", sans-serif;
+}
+
+/* Nav elements */
+div#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 700;
+
+	padding: 0.5em;
+
+	background-color: var(--header-bg);
+	backdrop-filter: blur(var(--header-bg-blur));
+}
+div#header div {
+	display: inline-block;
+}
+div#header > div.content {
+	/*position: absolute;
+	left: 0;
+	top: 0.5em;*/
+	/*margin: var(--sidebar-width);*/
+	margin-left: 1em;
+}
+div#header #title {
+	font-size: 2em;
+
+	font-family: Nunito;
+	font-weight: bold;
+
+	transition: text-shadow 0.2s ease-in;
+
+	cursor: pointer;
+}
+div#header #title:hover {
+	text-shadow: 0 0 10px var(--title-hover);
+}
+div#sidebar-open {
+	/*display: inline-block;
+	position: static;
+	top: 0;
+	left: 0;
+	margin: 5px;*/
+	z-index: 1000;
+	margin-left: 5px;
+
+	font-size: 2em /*30px*/;
+
+	cursor: pointer;
+}
+div#sidebar-open:hover {
+	color: var(--text-hover);
+}
+
+div.toggle {
+	background-color: var(--toggle-bg);
+	height: 1.5em;
+	width: 3em;
+
+	border-radius: 10000px;
+
+	cursor: pointer;
+}
+div.toggle::after {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 0;
+
+	transition: left 0.1s linear;
+
+	background-color: var(--toggle-slider);
+	height: 1.5em;
+	width: 1.5em;
+
+	transform: scale(1.1);
+
+	box-shadow: 0 0 1em #0006;
+
+	border-radius: inherit;
+}
+div.toggle.on::after {
+	left: 1.5em;
+}
+div#header div.toggle {
+	margin-top: 0.5em;
+	margin-right: 15px;
+}
+
+div#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 800;
+
+	overflow: hidden;
+
+	width: 0; /* Changed by JS; Change to var(--sidebar-width) to show by default */
+	transition: width var(--sidebar-appear) ease-in-out;
+
+	height: calc(100vh - 60px); /* Should be set to roughly 60 by JS anyway */
+	margin-top: 60px;
+
+	background-color: var(--sidebar-bg);
+	backdrop-filter: blur(var(--sidebar-bg-blur));
+}
+div#sidebar > div.content {
+	width: var(--sidebar-width);
+}
+div#sidebar > div.content > * {
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+
+	color: inherit;
+	text-decoration: none;
+}
+div#sidebar > div.content > *[indent] {
+	padding-left: 30px;
+}
+div#sidebar > div.content > a {
+	/*transition: all 0.1s linear;*/
+}
+div#sidebar > div.content > a:hover {
+	background-color: var(--sidebar-hover-bg);
+	color: var(--inverse-text);
+}
+
+/* Content */
+.center {
+	text-align: center;
+}
+
+div#content-container {
+	padding: 1em;
+
+	margin-bottom: 100px;
+}
+
+/* Content Scaling */
+/* Defaults if screen resolution not defined */
+div#content-container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 1920px) {
+	div#content-container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	div#content-container {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
