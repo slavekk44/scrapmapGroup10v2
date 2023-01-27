@@ -164,7 +164,7 @@ div#sidebar {
 
 	overflow: hidden;
 
-	width: 0; /* Changed by JS; Change to var(--sidebar-width) to show by default */
+	width: 0;
 	transition: width var(--sidebar-appear) ease-in-out;
 
 	height: calc(100vh - 60px); /* Should be set to roughly 60 by JS anyway */
@@ -173,8 +173,15 @@ div#sidebar {
 	background-color: var(--sidebar-bg);
 	backdrop-filter: blur(var(--sidebar-bg-blur));
 }
+div#sidebar.show {
+	width: var(--sidebar-width);
+}
 div#sidebar > div.content {
 	width: var(--sidebar-width);
+
+	position: relative;
+	top: 0;
+	left: 0;
 }
 div#sidebar > div.content > * {
 	display: block;

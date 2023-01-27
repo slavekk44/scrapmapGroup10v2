@@ -50,15 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	let sidebarOpen = document.getElementById('sidebar-open');
 	let sidebar = document.getElementById('sidebar');
 
-	let compStyle = getComputedStyle(sidebar);
-
-	if (!sidebar.style.width) sidebar.style.width = '0';
-
 	sidebarOpen.addEventListener('click', () => {
-		console.log(compStyle.getPropertyValue('--sidebar-width'));
-		if (sidebar.style.width == '0px')
-			sidebar.style.width = compStyle.getPropertyValue('--sidebar-width');
+		if (sidebar.classList.contains('show'))
+			sidebar.classList.remove('show');
 		else
-			sidebar.style.width = '0';
+			sidebar.classList.add('show');
 	});
 });
+
+// OLD VERSION
+// document.addEventListener('DOMContentLoaded', () => {
+// 	let sidebarOpen = document.getElementById('sidebar-open');
+// 	let sidebar = document.getElementById('sidebar');
+
+// 	let compStyle = getComputedStyle(sidebar);
+
+// 	if (!sidebar.style.width) sidebar.style.width = '0';
+
+// 	sidebarOpen.addEventListener('click', () => {
+// 		console.log(compStyle.getPropertyValue('--sidebar-width'));
+// 		if (sidebar.style.width == '0px')
+// 			sidebar.style.width = compStyle.getPropertyValue('--sidebar-width');
+// 		else
+// 			sidebar.style.width = '0';
+// 	});
+// });
