@@ -1,1 +1,126 @@
 /* Put stuff specific to the about page here */
+/* for testing purpose 
+        ABOUT US
+body {
+  background-color: rgb(44, 22, 22);
+}
+*/
+img {
+    border-radius: 50%;
+  }
+  .picture{
+    float: right;
+    position: relative;
+    padding-top: 2%;
+    margin-right: 15%;
+    width: 400px;
+   
+    border-radius: 50%;
+   
+  }
+  .picture1{
+    float: left;
+    position: relative;
+    padding-top: 2%;
+    margin-left: 20%;
+    width: 400px;
+     
+    border-radius: 50%;
+  }
+  
+  
+  .aboutUs {
+    
+    float: right;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-top: 5%;
+    margin-right: 20%;
+    border-radius: 20px;
+    border-style: none hidden solid hidden;
+  }
+  .aboutUs1 {
+    
+    float: left;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-top: 5%;
+    margin-left: 20%;
+    
+    width: 30%;
+    
+  }
+  .aboutUs2 {
+    
+    float: right;
+    text-align: right;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-top: 5%;
+    margin-right: 20%;
+    
+    width: 30%;
+    
+  }
+  
+  
+  @media screen and (max-width: 1920px) {
+    .aboutUs {
+      font-size: 25px;
+      width: 1000px;
+      height: 100%;
+  
+      padding-top: 8%;
+      margin-right: 25%;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .aboutUs {
+      width: 750px;
+      height: 100%;
+  
+      padding-top: 8%;
+      margin-right: 20%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .aboutUs {
+      width: 600px;
+      height: 100%;
+  
+      padding-top: 10%;
+      margin-right: 14%;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .aboutUs,
+    .aboutUs2,
+    .aboutUs1 {
+      float: center;
+      font-size: 18px;
+      width: 200px;
+      height: 60%;
+  
+      padding-top: 35%;
+      margin-right: 20%;
+    }
+    .picture {
+      float: center;
+      position: relative;
+      padding-top: 2%;
+      left: 140px;
+  
+      border-radius: 50%;
+    }
+    .picture1 {
+      float: center;
+      position: relative;
+      padding-top: 2%;
+      right: 100px;
+  
+      border-radius: 50%;
+    }
+  }
+  
