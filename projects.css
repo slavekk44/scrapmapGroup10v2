@@ -30,3 +30,8 @@ div.content-img > span {
 	background-color: rgb(77, 77, 77);
 	/* text-shadow: 0 0 5px #0004; */
 }
+
+.project-text{
+font-size: 2.3em;
+font-family: monaco;
+}
