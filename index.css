@@ -53,3 +53,9 @@ div.home4 {
 
 	font-size: 4em;
 }
+
+/* For animations */
+.footer {
+	transform: translateY(101%);
+	transition: transform var(--scroll-speed) linear;
+}
