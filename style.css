@@ -34,7 +34,7 @@ body, body.dark {
 }
 body.light {
 	--main-bg: white;
-	--header-bg: #dededea0;
+	--header-bg: #dededed0;
 	--sidebar-bg: #d0d0d090;
 	--sidebar-hover-bg: black;
 
