@@ -3,7 +3,7 @@
 :root {
 	--scroll-speed: 0.25s;
 
-	--button-size: 1.5em;
+	--button-size: 3em;
 }
 
 div#page-scroller {
@@ -34,7 +34,7 @@ div.page-section > div.vertcenter {
 /* Button stuff */
 #page-buttons {
 	position: fixed;
-	left: 2vw;
+	right: 2vw;
 	top: 50vh;
 	transform: translateY(-50%);
 }
