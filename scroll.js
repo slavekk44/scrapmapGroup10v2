@@ -89,8 +89,9 @@ function createRadioButtons() {
 		// Store the page to scroll to
 		b.setAttribute('section', i);
 
-		// Add hover text
-		b.setAttribute('title', `Go to section ${i+1}`);
+		// Add hover text (defined in HTML, defaults to number)
+		let secname = sections[i].getAttribute('secname');
+		b.setAttribute('title', `Go to ${secname ? secname : ("section " + (i+1))}`);
 
 		// Add event listener
 		b.addEventListener('click', () => {
