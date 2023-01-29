@@ -8,12 +8,13 @@ var pos = 0; // Current scroll position
 var secPos = 0; // Current section
 
 var windowHeight;
+var numSections;
 
 /**
  * Initialise/re-initialise the page scroller
  * Either for page load or resolution changes
  */
-function initScoller() {
+function initScroller() {
 	if (!scroller) {
 		// Get scoller element
 		scroller = document.getElementById('page-scroller');
@@ -26,12 +27,13 @@ function initScoller() {
 	windowHeight = window.visualViewport.height;
 
 	// Set body height to total number of sections
-	document.body.style.height = `${windowHeight*sections.length}px`;
+	document.body.style.height = `${windowHeight*numSections}px`;
 }
 
 // Initialise on page load
 document.addEventListener('DOMContentLoaded', () => {
-	initScoller();
+	numSections = document.getElementsByClassName('page-section').length;
+	initScroller();
 });
 
 // On scroll event; does most of the work
@@ -48,5 +50,5 @@ document.addEventListener('scroll', () => {
 
 // Handle window resizes
 document.addEventListener('onresize', () => {
-	initScoller();
+	initScroller();
 });
