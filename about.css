@@ -91,27 +91,3 @@ img {
 }
 
 
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	padding: 1%;
-	width: 100%;
-	background-color: rgb(62, 36, 36);
-	background-color: var(--main-bg);
-	text-align: center;
-	border-top: red;
-	border-style: solid hidden hidden hidden;
-
- }
-.footer .left{
-	float: left;
-	margin-left: 1%;
-	color:black;
-
-}
-.footer .right{
-	float: right;
-	margin-right: 1%;
-	
-}
