@@ -5,6 +5,39 @@ body {
   background-color: rgb(44, 22, 22);
 }
 */
+/* Background change*/
+
+
+#sticky {
+  position:fixed;
+  top:10px;
+  left:10px;
+  right:10px;
+  height:50px;
+  transition: all 2s ease;
+}
+#sticky.light {
+  color:black;
+}
+#sticky.dark {
+  color:white;
+}
+.content1 {
+  width:100%;
+  height:250px;
+  transition: all 4s ease;
+  margin-top: 1%;
+}
+.content1.dark {
+  background:black;
+}
+.content1.light {
+  background:#f2f2f2;
+}
+
+
+
+/* webpage*/
 img {
     border-radius: 50%;
   }
@@ -13,6 +46,7 @@ img {
     position: relative;
     padding-top: 2%;
     margin-right: 15%;
+    margin-top: 2%;
     width: 400px;
    
     border-radius: 50%;
@@ -24,7 +58,7 @@ img {
     padding-top: 2%;
     margin-left: 20%;
     width: 400px;
-     
+    margin-top: 2%;
     border-radius: 50%;
   }
   
@@ -37,7 +71,8 @@ img {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     padding-top: 5%;
     margin-right: 20%;
-   
+    margin-top: 2%;
+
   }
   .aboutUs1 {
     
