@@ -1,5 +1,10 @@
 /* Put stuff specific to the home page here */
 
+body {
+	background-color: blue;
+	transition: background-color var(--scroll-speed) linear;
+}
+
 div.home1 {
 	background-color: red;
 	color: white;
@@ -8,7 +13,15 @@ div.home1 {
 }
 #home2-fade {
 	opacity: 0;
-	transition: opacity 3s linear;
+	transition: all 1s ease-out;
+	position: relative;
+
+	left: -.2em;
+}
+#home2-fade.end {
+	opacity: 1;
+
+	left: 0;
 }
 
 div.home2 {
@@ -19,7 +32,14 @@ div.home2 {
 }
 
 div.home3 {
-	background-color: blue;
+	background-color: #0000;
+	color: white;
+
+	font-size: 4em;
+}
+
+div.home4 {
+	background-color: #0000;
 	color: white;
 
 	font-size: 4em;

@@ -48,9 +48,15 @@
 				</div>
 			</div>
 
-			<div class="page-section home3">
+			<div class="page-section home3" onscrollto="bgfade('blue')">
 				<div class="center vertcenter">
 					Section 3
+				</div>
+			</div>
+
+			<div class="page-section home4" onscrollto="bgfade('green')">
+				<div class="center vertcenter">
+					Section 4
 				</div>
 			</div>
 		</div>
@@ -60,8 +66,11 @@
 			// Small test animation
 			function home2Fade() {
 				let elem = document.getElementById('home2-fade');
+				elem.classList.add('end');
+			}
 
-				elem.style.opacity = 1;	
+			function bgfade(col) {
+				document.body.style.backgroundColor = col;
 			}
 
 		</script>
