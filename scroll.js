@@ -38,13 +38,7 @@ function initScroller() {
 	document.body.style.height = `${windowHeight*numSections}px`;
 }
 
-// Initialise on page load
-document.addEventListener('DOMContentLoaded', () => {
-	initScroller();
-});
-
-// On scroll event; does most of the work
-document.addEventListener('scroll', () => {
+function updatePos() {
 	// Update pos
 	pos = window.pageYOffset;
 
@@ -73,9 +67,18 @@ document.addEventListener('scroll', () => {
 		// Run the animation
 		eval(codeStr);
 	}
+}
+
+// Initialise on page load
+document.addEventListener('DOMContentLoaded', () => {
+	initScroller();
+
+	// Handle window resizes
+	document.body.onresize = () => {
+		console.log("Resize: ", window.visualViewport.height);
+		initScroller();
+	};
 });
 
-// Handle window resizes
-document.addEventListener('resize', () => {
-	initScroller();
-});
+// On scroll event; does most of the work
+document.addEventListener('scroll', updatePos);
