@@ -7,7 +7,7 @@ div#page-scroller {
 
 	width: 100%;
 
-	transition: top 0.5s linear;
+	transition: top 0.25s linear;
 }
 
 div.page-section {
