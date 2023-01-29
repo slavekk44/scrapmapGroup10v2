@@ -191,11 +191,11 @@ div#sidebar > div.content > * {
 	color: inherit;
 	text-decoration: none;
 }
+div#sidebar > div.content > *:first-child {
+	margin-top: 5px;
+}
 div#sidebar > div.content > *[indent] {
 	padding-left: 30px;
-}
-div#sidebar > div.content > a {
-	/*transition: all 0.1s linear;*/
 }
 div#sidebar > div.content > a:hover {
 	background-color: var(--sidebar-hover-bg);

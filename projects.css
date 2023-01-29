@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
 .grid-container {
 	position: relative;
 	display: grid;
@@ -29,27 +31,27 @@ div.content-img > span {
 	font-size: 1.5em;
 	text-align: center; 
 	font-family: cursive;
-	color: var(--main-text);
+	color: white;
 	background-color: rgb(77, 77, 77);
 	/* text-shadow: 0 0 5px #0004; */
 }
 
-.project-text{
-font-size: 2.3em;
-font-family: monaco;
-
+.project-text {
+	font-size: 2.3em;
+	font-family: monaco;
 }
 
-body{
+body {
 	background:var(--main-bg);
 	min-height: 450vh;
-  }
-  h1{
+}
+
+h1.project-bg {
 	font-family: 'Codystar', san-serif;
 	font-size: 12vw;
-	color: rgb(137, 199, 5);
+	color: rgba(137, 199, 5, 0.125);
 	text-align: center;
 	position: fixed;
 	width: 100vw;
 	margin-top: 3vw;
-  }
+}
