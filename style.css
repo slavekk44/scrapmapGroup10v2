@@ -235,7 +235,7 @@ div#content-container {
 	padding: 1%;
 	width: 100%;
 	background-color: rgb(62, 36, 36);
-	background-color: var(--main-bg);
+	background-color: var(--header-bg);
 	text-align: center;
 	border-top: red;
 	border-style: solid hidden hidden hidden;
