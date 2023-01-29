@@ -14,6 +14,9 @@ var secPos = 0; // Current section
 var windowHeight;
 var numSections;
 
+// Button stuff
+var buttons = [];
+
 /**
  * Initialise/re-initialise the page scroller
  * Either for page load or resolution changes
@@ -53,8 +56,10 @@ function updatePos() {
 	// Offset the page by the section position
 	scroller.style.top = `${-secPos*windowHeight}px`;
 
-	// If position changed trigger animations
+	// If position changed trigger animations and update buttons
 	if (secPos != oldSecPos) {
+		updateRadioButtons();
+
 		let s = sections[secPos];
 
 		// Return if secPos is invalid
@@ -71,6 +76,32 @@ function updatePos() {
 	}
 }
 
+function createRadioButtons() {
+	// Create container and assign id
+	let container = document.createElement('div');
+	container.id = 'page-buttons';
+
+	// Create each button
+	for (var i=0; i<numSections; i++) {
+		let b = document.createElement('div');
+		buttons.push(b);
+		container.appendChild(b);
+	}
+
+	// Add container to page
+	document.body.appendChild(container);
+}
+
+function updateRadioButtons() {
+	for (var i=0; i<numSections; i++) {
+		if (i == secPos) {
+			buttons[i].classList.add('current');
+		} else {
+			buttons[i].classList.remove('current');
+		}
+	}
+}
+
 // Initialise on page load
 document.addEventListener('DOMContentLoaded', () => {
 	initScroller();
@@ -80,6 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		console.log("Resize: ", window.visualViewport.height);
 		initScroller();
 	};
+
+	// Create buttons
+	createRadioButtons();
+
+	// Update buttons to initial state
+	updateRadioButtons();
 });
 
 // On scroll event; does most of the work

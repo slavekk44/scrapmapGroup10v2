@@ -2,6 +2,8 @@
 
 :root {
 	--scroll-speed: 0.25s;
+
+	--button-size: 1.5em;
 }
 
 div#page-scroller {
@@ -27,4 +29,33 @@ div.page-section > div.vertcenter {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+/* Button stuff */
+#page-buttons {
+	position: fixed;
+	left: 2vw;
+	top: 50vh;
+	transform: translateY(-50%);
+}
+#page-buttons > div {
+	display: block;
+	width: var(--button-size);
+	height: var(--button-size);
+
+	border: 2px solid #000a;
+	border-radius: 50%;
+
+	margin-bottom: 0.5em;
+
+	background-color: white;
+
+	cursor: pointer;
+}
+#page-buttons > div:last-child {
+	margin-bottom: 0;
+}
+
+#page-buttons > div.current {
+	background-color: red;
 }
