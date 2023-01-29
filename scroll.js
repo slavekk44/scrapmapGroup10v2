@@ -83,7 +83,19 @@ function createRadioButtons() {
 
 	// Create each button
 	for (var i=0; i<numSections; i++) {
+		// Create element
 		let b = document.createElement('div');
+		b.id = `pb${i}`;
+		b.setAttribute('sec', i);
+
+		// Add event listener
+		b.addEventListener('click', () => {
+			let n = b.getAttribute('sec');
+			scrollTo(0, n*windowHeight);
+			console.log("scrollTo: ", n);
+		});
+		
+		// Add to array and container
 		buttons.push(b);
 		container.appendChild(b);
 	}
