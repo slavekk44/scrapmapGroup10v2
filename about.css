@@ -30,10 +30,10 @@ body {
   margin-top: 1%;
 }
 .content1.dark {
-  background:black;
+  background:rgb(97, 97, 97);
 }
 .content1.light {
-  background:#f2f2f2;
+  background:#c8d7bc;
 }
 
 
