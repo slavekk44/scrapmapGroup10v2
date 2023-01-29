@@ -29,8 +29,13 @@ div.home1 {
 }
 
 div.home2 {
-	background-color: yellow;
-	color: black;
+	/* Background image test */
+	background: url("img/share-mom1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+
+	color: white;
+	text-shadow: 0 .1em .5em #0005;
 
 	font-size: 4em;
 }
