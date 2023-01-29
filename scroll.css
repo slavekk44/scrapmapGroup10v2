@@ -16,6 +16,8 @@ div#page-scroller {
 
 div.page-section {
 	height: 100vh;
+
+	overflow: hidden;
 }
 
 div.page-section > div.center {
