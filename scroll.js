@@ -2,6 +2,8 @@
 	Page scroll code
 */
 
+var scrollSensitivity = 1; // Not currently working
+
 var scroller;
 
 var sections;
@@ -35,7 +37,7 @@ function initScroller() {
 	windowHeight = window.visualViewport.height;
 
 	// Set body height to total number of sections
-	document.body.style.height = `${windowHeight*numSections}px`;
+	document.body.style.height = `${(windowHeight*(numSections))/scrollSensitivity}px`;
 }
 
 function updatePos() {
@@ -46,7 +48,7 @@ function updatePos() {
 	var oldSecPos = secPos;
 
 	// Calculate the closest section
-	secPos = Math.round(pos / windowHeight);
+	secPos = Math.round((pos*scrollSensitivity)/windowHeight);
 
 	// Offset the page by the section position
 	scroller.style.top = `${-secPos*windowHeight}px`;

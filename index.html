@@ -48,7 +48,7 @@
 				</div>
 			</div>
 
-			<div class="page-section home3" onscrollto="bgfade('blue');headerfade('#0000')">
+			<div class="page-section home3" onscrollto="bgfade('blue');headerfade('#0000', '0')">
 				<div class="center vertcenter">
 					Section 3
 				</div>
@@ -77,11 +77,13 @@
 			}
 
 			// Fade header bg
-			function headerfade(col) {
+			function headerfade(col, blur) {
 				header.style.setProperty('--header-bg', col);
+				header.style.setProperty('--header-blur', blur);
 			}
 			function headerreset() {
 				header.style.setProperty('--header-bg', 'inherit');
+				header.style.setProperty('--header-blur', 'inherit');
 			}
 
 		</script>
