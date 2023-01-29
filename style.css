@@ -2,7 +2,7 @@
 
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
 
 /* Variables */
 body, body.dark {
@@ -88,7 +88,7 @@ div#header #title {
 	font-size: 2em;
 
 	font-family: Nunito;
-	font-weight: bold;
+	font-weight: 200;
 
 	transition: text-shadow 0.2s ease-in;
 
