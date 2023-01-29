@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.body.onresize = () => {
 		console.log("Resize: ", window.visualViewport.height);
 		initScroller();
+		updatePos();
 	};
 
 	// Create buttons
