@@ -51,6 +51,8 @@ div.page-section > div.vertcenter {
 	background-color: white;
 	transition: background-color 0.1s linear;
 
+	box-shadow: 0 0.3em 1.5em #0004;
+
 	cursor: pointer;
 }
 #page-buttons > div:hover {
