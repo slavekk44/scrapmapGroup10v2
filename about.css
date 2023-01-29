@@ -72,13 +72,8 @@ img {
 }
 
 .picture{
-	max-width: 50%;
-}
-.picture.left {
-	margin-right: 1em;
-}
-.picture.right {
-	margin-left: 1em;
+	width: 100%;
+	padding: 10px;
 }
 
 
