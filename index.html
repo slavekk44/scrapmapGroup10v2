@@ -39,7 +39,7 @@
 				</div>
 			</div>
 
-			<div class="page-section home2" onscrollto="home2Fade()">
+			<div class="page-section home2" onscrollto="home2Fade(); headerreset()">
 				<div class="center vertcenter">
 					Section 2
 					<div id="home2-fade">
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 
-			<div class="page-section home3" onscrollto="bgfade('blue')">
+			<div class="page-section home3" onscrollto="bgfade('blue');headerfade('#0000')">
 				<div class="center vertcenter">
 					Section 3
 				</div>
@@ -63,14 +63,25 @@
 
 		<script type="text/javascript">
 
+			let header = document.getElementById('header');
+
 			// Small test animation
 			function home2Fade() {
 				let elem = document.getElementById('home2-fade');
 				elem.classList.add('end');
 			}
 
+			// Fade page bg
 			function bgfade(col) {
 				document.body.style.backgroundColor = col;
+			}
+
+			// Fade header bg
+			function headerfade(col) {
+				header.style.setProperty('--header-bg', col);
+			}
+			function headerreset() {
+				header.style.setProperty('--header-bg', 'inherit');
 			}
 
 		</script>

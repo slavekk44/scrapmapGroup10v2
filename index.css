@@ -5,6 +5,10 @@ body {
 	transition: background-color var(--scroll-speed) linear;
 }
 
+#header {
+	transition: background-color var(--scroll-speed) linear, backdrop-filter var(--scroll-speed) linear;
+}
+
 div.home1 {
 	background-color: red;
 	color: white;
