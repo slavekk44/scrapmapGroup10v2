@@ -63,7 +63,7 @@ img {
 }
 
 .picture{
-	max-width: 100%;
+	max-width: 50%;
 }
 .picture.left {
 	margin-right: 1em;
@@ -83,10 +83,13 @@ img {
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
 	.aboutUs {
 		font-size: 18px;
 
 		width: 90%;
-	} 	
+	}
+	.picture {
+		max-width: 100%;
+	}
 }
