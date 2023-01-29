@@ -1,18 +1,26 @@
-/* Put stuff specific to the home page here */ 
+/* Put stuff specific to the home page here */
 
 div.home1 {
 	background-color: red;
 	color: white;
 
-	--header-bg: #0000;
+	font-size: 4em;
+}
+#home2-fade {
+	opacity: 0;
+	transition: opacity 3s linear;
 }
 
 div.home2 {
 	background-color: yellow;
 	color: black;
+
+	font-size: 4em;
 }
 
 div.home3 {
 	background-color: blue;
 	color: white;
+
+	font-size: 4em;
 }

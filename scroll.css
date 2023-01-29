@@ -1,5 +1,9 @@
 /* Stuff specific to whole page scrolling */
 
+:root {
+	--scroll-speed: 0.25s;
+}
+
 div#page-scroller {
 	position: fixed;
 	top: 0;
@@ -7,7 +11,7 @@ div#page-scroller {
 
 	width: 100%;
 
-	transition: top 0.25s linear;
+	transition: top var(--scroll-speed) linear;
 }
 
 div.page-section {

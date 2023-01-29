@@ -4,6 +4,8 @@
 
 var scroller;
 
+var sections;
+
 var pos = 0; // Current scroll position
 var secPos = 0; // Current section
 
@@ -23,6 +25,12 @@ function initScroller() {
 		if (!scroller) console.error("Scroller element not found (was the script loaded on the wrong page?)");
 	}
 
+	// Init sections array
+	if (!sections) {
+		sections = document.getElementsByClassName('page-section');
+		numSections = sections.length;
+	}
+
 	// Update window height
 	windowHeight = window.visualViewport.height;
 
@@ -32,7 +40,6 @@ function initScroller() {
 
 // Initialise on page load
 document.addEventListener('DOMContentLoaded', () => {
-	numSections = document.getElementsByClassName('page-section').length;
 	initScroller();
 });
 
@@ -41,14 +48,34 @@ document.addEventListener('scroll', () => {
 	// Update pos
 	pos = window.pageYOffset;
 
+	// Store old section position for comparison later
+	var oldSecPos = secPos;
+
 	// Calculate the closest section
 	secPos = Math.round(pos / windowHeight);
 
 	// Offset the page by the section position
 	scroller.style.top = `${-secPos*windowHeight}px`;
+
+	// If position changed trigger animations
+	if (secPos != oldSecPos) {
+		let s = sections[secPos];
+
+		// Return if secPos is invalid
+		if (!s) return;
+
+		// Get animation code from HTML attribute
+		let codeStr = s.getAttribute('onscrollto');
+
+		// Return if animation is not set
+		if (!codeStr) return;
+
+		// Run the animation
+		eval(codeStr);
+	}
 });
 
 // Handle window resizes
-document.addEventListener('onresize', () => {
+document.addEventListener('resize', () => {
 	initScroller();
 });
