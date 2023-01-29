@@ -16,7 +16,8 @@ div.content-img > img {
     border-width: 10px 25px 3px 25px;
 	border-color: dimgrey;
 	border-bottom-color: black;
-    margin-top: 2%;
+    margin-top: 15%;
+	
 	
 
 }
@@ -39,6 +40,8 @@ div.content-img > span {
 .project-text {
 	font-size: 2.3em;
 	font-family: monaco;
+	margin-top: 15%;
+	
 }
 
 body {
@@ -54,4 +57,15 @@ h1.project-bg {
 	position: fixed;
 	width: 100vw;
 	margin-top: 3vw;
+}
+.ourProject {
+	margin: 0 auto 1em auto;
+	margin-top: 5%;
+	width: 70%;
+
+	text-align: center;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	
+	
 }

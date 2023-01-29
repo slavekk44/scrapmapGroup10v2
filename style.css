@@ -221,6 +221,15 @@ div#content-container {
 	margin-right: auto;
 }
 
+#border{
+    position: relative;
+    width: 60%;
+    height: 4px;
+    background-color: rgb(255, 0, 0);
+    margin: 0 auto;
+}
+
+
 @media screen and (max-width: 1920px) {
 	div#content-container {
 		width: 90%;
