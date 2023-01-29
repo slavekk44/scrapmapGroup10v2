@@ -85,14 +85,18 @@ function createRadioButtons() {
 	for (var i=0; i<numSections; i++) {
 		// Create element
 		let b = document.createElement('div');
-		b.id = `pb${i}`;
-		b.setAttribute('sec', i);
+
+		// Store the page to scroll to
+		b.setAttribute('section', i);
+
+		// Add hover text
+		b.setAttribute('title', `Go to section ${i+1}`);
 
 		// Add event listener
 		b.addEventListener('click', () => {
-			let n = b.getAttribute('sec');
+			if (b.classList.contains('current')) return;
+			let n = b.getAttribute('section');
 			scrollTo(0, n*windowHeight);
-			console.log("scrollTo: ", n);
 		});
 		
 		// Add to array and container

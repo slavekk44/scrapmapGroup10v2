@@ -49,8 +49,12 @@ div.page-section > div.vertcenter {
 	margin-bottom: 0.5em;
 
 	background-color: white;
+	transition: background-color 0.1s linear;
 
 	cursor: pointer;
+}
+#page-buttons > div:hover {
+	background-color: #ccc;
 }
 #page-buttons > div:last-child {
 	margin-bottom: 0;
