@@ -1,0 +1,15 @@
+/* Stuff specific to whole page scrolling */
+
+div#page-scroller {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+
+	transition: top 0.5s linear;
+}
+
+div.page-section {
+	height: 100vh;
+}

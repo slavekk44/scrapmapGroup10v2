@@ -22,7 +22,7 @@ body, body.dark {
 	--toggle-bg: #666;
 	--toggle-slider: #ccc;
 	--title-colour: #0000; /* Must be fully transparent for gradient */
-	--title-gradient: linear-gradient(to right, #afa, #aaf);
+	--title-gradient: linear-gradient(to right, red, white);
 
 	/* Element Dimensions */
 	--sidebar-width: 240px;

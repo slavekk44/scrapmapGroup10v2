@@ -1,1 +1,13 @@
 /* Put stuff specific to the home page here */ 
+
+div.home1 {
+	background-color: red;
+	color: white;
+
+	--header-bg: #0000;
+}
+
+div.home2 {
+	background-color: yellow;
+	color: white;
+}

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	sidebar.style.marginTop = margin;
 	sidebar.style.height = `calc(100vh - ${margin})`;
-	content.style.marginTop = margin;
+	if (content) content.style.marginTop = margin;
 
 	// Add event listeners for toggles
 	let toggles = document.getElementsByClassName('toggle');
