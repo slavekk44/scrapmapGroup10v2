@@ -85,7 +85,7 @@ img {
 }
 
 .picture{
-	max-width: 50%;
+	max-width: 100%;
 }
 .picture.left {
 	margin-right: 1em;
