@@ -14,15 +14,15 @@
 }
 
 div.content-img {
-	width: 30%;
+	width: 40%;
 }
 div.content-img > img {
 	width: 100%;
 	display: block;
-	border-style: solid;
-    border-width: 10px 25px 3px 25px;
-	border-color: dimgrey;
-	border-bottom-color: black;
+	
+	border-radius: 5%;
+	border-top-left-radius: 80px 80px;
+	border-bottom-left-radius: 80px 80px;
     /* margin-top: 15%; */
 	
 	
@@ -51,8 +51,9 @@ div.content-img.right {
 }
 
 .project-text {
-	font-size: 2.3em;
+	font-size: 1.8em;
 	font-family: monaco;
+
 	/* margin-top: 15%; */
 	
 }
