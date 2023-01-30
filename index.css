@@ -10,7 +10,7 @@ body {
 }
 
 div.home1 {
-	background-color: red;
+	background-color: rgba(249, 18, 18, 0.878);
 	color: white;
 
 	font-size: 4em;
@@ -30,13 +30,13 @@ div.home1 {
 
 div.home2 {
 	/* Background image test */
-	background: url("img/share-mom1.jpg");
+	background: url("img/joinUs.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-
-	color: white;
+	
+	color: rgb(231, 222, 222);
 	text-shadow: 0 .1em .5em #0005;
-
+	font-weight: bold;
 	font-size: 4em;
 }
 
@@ -59,3 +59,26 @@ div.home4 {
 	transform: translateY(101%);
 	transition: transform var(--scroll-speed) linear;
 }
+/* Join button*/
+.button {
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  }
+  
+  .button1 {
+	background-color: white; 
+	color: black; 
+	border: 2px solid #4CAF50;
+  }
+  .button1:hover {
+	background-color: #4CAF50;
+	color: white;
+  }
