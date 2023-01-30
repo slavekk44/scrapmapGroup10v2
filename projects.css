@@ -14,12 +14,13 @@
 }
 
 div.content-img {
-	width: 40%;
+	width: 50%;
+	
 }
 div.content-img > img {
-	width: 100%;
+	width: 80%;
 	display: block;
-	
+	padding: 5%;
 	
 	border-top-left-radius: 80px 80px;
 	border-bottom-left-radius: 80px 80px;
@@ -51,8 +52,8 @@ div.content-img.right {
 }
 
 .project-text {
-	
-	padding: 5%;
+	width: 90%;
+	padding: 2%;
 	font-size: 1.8em;
 	font-family: monaco;
 	text-align: center;
