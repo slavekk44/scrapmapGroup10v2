@@ -10,7 +10,7 @@ body {
 }
 
 div.home1 {
-	background-color: rgba(249, 18, 18, 0.878);
+	background-color:#FF4242;
 	color: white;
 
 	font-size: 4em;
@@ -30,7 +30,7 @@ div.home1 {
 
 div.home2 {
 	/* Background image test */
-	background: url("img/joinUs.jpg");
+	background: url("img/globe.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	
@@ -41,9 +41,13 @@ div.home2 {
 }
 
 div.home3 {
-	background-color: #0000;
+	background-attachment: fixed;
+	background-size: cover;
+	background: url("img/joinUs.jpg");
 	color: white;
 
+	text-shadow: 0 .1em .5em #0005;
+	font-weight: bold;
 	font-size: 4em;
 }
 
