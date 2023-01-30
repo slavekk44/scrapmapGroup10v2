@@ -20,7 +20,7 @@ div.content-img > img {
 	width: 100%;
 	display: block;
 	
-	border-radius: 5%;
+	
 	border-top-left-radius: 80px 80px;
 	border-bottom-left-radius: 80px 80px;
     /* margin-top: 15%; */
@@ -51,9 +51,11 @@ div.content-img.right {
 }
 
 .project-text {
+	
+	padding: 5%;
 	font-size: 1.8em;
 	font-family: monaco;
-
+	text-align: center;
 	/* margin-top: 15%; */
 	
 }
@@ -65,8 +67,8 @@ body {
 
 h1.project-bg {
 	font-family: 'Codystar', san-serif;
-	font-size: 12vw;
-	color: rgba(137, 199, 5, 0.125);
+	font-size: 13vw;
+	color: rgba(242, 13, 13, 0.33);
 	text-align: center;
 	position: fixed;
 	width: 100vw;
