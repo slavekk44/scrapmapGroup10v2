@@ -60,19 +60,35 @@ function updatePos() {
 	if (secPos != oldSecPos) {
 		updateRadioButtons();
 
-		let s = sections[secPos];
+		// Calculate the scroll direction
+		let dir = Math.sign(secPos - oldSecPos);
 
-		// Return if secPos is invalid
-		if (!s) return;
+		// Function to trigger the animation for section e
+		const anim = (e) => {
+			let s = sections[e];
 
-		// Get animation code from HTML attribute
-		let codeStr = s.getAttribute('onscrollto');
+			// Return if secPos is invalid
+			if (!s) return;
 
-		// Return if animation is not set
-		if (!codeStr) return;
+			// Get animation code from HTML attribute
+			let codeStr = s.getAttribute('onscrollto');
 
-		// Run the animation
-		eval(codeStr);
+			// Return if animation is not set
+			if (!codeStr) return;
+
+			// Run the animation
+			eval(codeStr);
+		};
+
+		// If scrolling down
+		if (dir > 0)
+			// Trigger animations between the last section and (including) the current one
+			for (var i=oldSecPos; i<=secPos; i++) anim(i);
+		
+		// If scrolling up
+		else if (dir < 0)
+			// Trigger animations between the last section and (including) the current one
+			for (var i=oldSecPos; i>=secPos; i--) anim(i);
 	}
 }
 
