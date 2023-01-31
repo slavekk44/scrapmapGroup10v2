@@ -75,6 +75,7 @@ div.home4 {
 	margin: 4px 2px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	position: relative;
   }
   
   .button1 {
