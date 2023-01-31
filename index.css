@@ -19,6 +19,11 @@
 	transition: background-color var(--scroll-speed) linear, backdrop-filter var(--scroll-speed) linear;
 }
 
+div {
+	background-size: cover;
+	background-position: center;
+}
+
 div.home1 {
 	background-color:#FF4242;
 	color: white;
@@ -39,10 +44,8 @@ div.home1 {
 }
 
 div.home2 {
-	/* Background image test */
-	background: url("img/globe.jpg");
+	background-image: url("img/globe.jpg");
 	background-attachment: fixed;
-	background-size: cover;
 	
 	color: rgba(242, 13, 13);
 	text-shadow: 0 .1em .5em #0005;
@@ -53,7 +56,7 @@ div.home2 {
 div.home3 {
 	background-attachment: fixed;
 	background-size: cover;
-	background: url("img/joinUs.jpg");
+	background-image: url("img/joinUs.jpg");
 	color: white;
 
 	text-shadow: 0 .1em .5em #0005;
@@ -64,7 +67,7 @@ div.home3 {
 div.home4 {
 	background-attachment: fixed;
 	background-size: cover;
-	background: url("img/section4.jpg");
+	background-image: url("img/section4.jpg");
 	color: white;
 
 	font-size: 4em;
