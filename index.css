@@ -105,6 +105,8 @@ div.home4 {
 }
 
 /* CSS Only Animations */
+
+/* Fade in */
 .anim-fade {
 	opacity: 0;
 
@@ -114,26 +116,28 @@ div.home4 {
 	opacity: 1;
 }
 
-div.anim-left {
+/* Slide and fade in from left */
+.anim-left {
 	transform: translateX(calc(-1 * var(--slide-in-offset)));
 	opacity: 0;
 
 	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
 	transition-delay: var(--scroll-speed);
 }
-.anim-end div.anim-left {
+.anim-end .anim-left {
 	transform: none;
 	opacity: 1;
 }
 
-div.anim-right {
+/* Slide and fade in from right */
+.anim-right {
 	transform: translateX(var(--slide-in-offset));
 	opacity: 0;
 
 	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
 	transition-delay: var(--scroll-speed);
 }
-.anim-end div.anim-right {
+.anim-end .anim-right {
 	transform: none;
 	opacity: 1;
 }
