@@ -236,6 +236,7 @@ div#content-container {
 	width: 100%;
 	background-color: rgb(62, 36, 36);
 	background-color: var(--header-bg);
+	backdrop-filter: blur(var(--header-bg-blur));
 	text-align: center;
 	border-top: red;
 	border-style: solid hidden hidden hidden;

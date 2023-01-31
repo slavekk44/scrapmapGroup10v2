@@ -35,7 +35,7 @@
 		<div id="page-scroller">
 
 			<!--Section 1-->
-			<div class="page-section home1" secname="Test Section 1">
+			<div class="page-section home1" secname="Test Section 1" onscrollto="headerreset()">
 				<div class="center vertcenter">
 					
 
@@ -67,7 +67,7 @@
 			</div>
 			
 			<!--Section 2-->
-			<div class="page-section home2" onscrollto="home2Fade(); headerreset()">
+			<div class="page-section home2" onscrollto="home2Fade();headerfade('#0000', '0')">
 				<div class="center vertcenter">
 					Discover Endless
 					<br> <i style="color: white; text-align: center;">Possibilities</i><br>
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<!--Section 3-->
-			<div class="page-section home3" onscrollto="bgfade('blue');headerfade('#0000', '0');hideFooter()">
+			<div class="page-section home3" onscrollto="bgfade('blue');hideFooter()">
 				<div class="center vertcenter">
 					Join us Now!
 					<br>
@@ -147,11 +147,11 @@
 			// Fade header bg
 			function headerfade(col, blur) {
 				header.style.setProperty('--header-bg', col);
-				header.style.setProperty('--header-blur', blur);
+				header.style.setProperty('--header-bg-blur', blur);
 			}
 			function headerreset() {
 				header.style.setProperty('--header-bg', 'inherit');
-				header.style.setProperty('--header-blur', 'inherit');
+				header.style.setProperty('--header-bg-blur', 'inherit');
 			}
 
 			// Footer animation

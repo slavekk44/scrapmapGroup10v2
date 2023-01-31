@@ -1,9 +1,10 @@
 /* Put stuff specific to the home page here */
 
-body {
+/* Removing as background fade animation no longer used */
+/* body {
 	background-color: blue;
 	transition: background-color var(--scroll-speed) linear;
-}
+} */
 
 #header {
 	transition: background-color var(--scroll-speed) linear, backdrop-filter var(--scroll-speed) linear;
@@ -83,10 +84,10 @@ div.home4 {
   .button1 {
 	background-color: white; 
 	color: black; 
-	border: 2px solid #4CAF50;
+	border: 2px solid #af4c4c;
   }
   .button1:hover {
-	background-color: #4CAF50;
+	background-color: #af4c4c;
 	color: white;
   }
 
