@@ -60,6 +60,16 @@ function updatePos() {
 	if (secPos != oldSecPos) {
 		updateRadioButtons();
 
+		// Trigger css animations
+		for (var i=0; i<numSections; i++) {
+			let s = sections[i];
+
+			if (i == secPos)
+				s.classList.add('anim-end');
+			else
+				s.classList.remove('anim-end');
+		}
+
 		// Calculate the scroll direction
 		let dir = Math.sign(secPos - oldSecPos);
 
