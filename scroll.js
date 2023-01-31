@@ -61,14 +61,7 @@ function updatePos() {
 		updateRadioButtons();
 
 		// Trigger css animations
-		for (var i=0; i<numSections; i++) {
-			let s = sections[i];
-
-			if (i == secPos)
-				s.classList.add('anim-end');
-			else
-				s.classList.remove('anim-end');
-		}
+		updateCssAnims();
 
 		// Calculate the scroll direction
 		let dir = Math.sign(secPos - oldSecPos);
@@ -145,6 +138,17 @@ function updateRadioButtons() {
 	}
 }
 
+function updateCssAnims() {
+	for (var i=0; i<numSections; i++) {
+		let s = sections[i];
+
+		if (i == secPos)
+			s.classList.add('anim-end');
+		else
+			s.classList.remove('anim-end');
+	}
+}
+
 // Initialise on page load
 document.addEventListener('DOMContentLoaded', () => {
 	initScroller();
@@ -161,6 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Update buttons to initial state
 	updateRadioButtons();
+
+	// Make sure animations play on page load
+	updateCssAnims();
 });
 
 // On scroll event; does most of the work

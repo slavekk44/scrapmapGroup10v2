@@ -1,5 +1,14 @@
 /* Put stuff specific to the home page here */
 
+:root {
+	/* Animation parameters */
+	--slide-fade-in-time: 0.85s;
+	--slide-in-time: 1s;
+	--slide-in-offset: 1em;
+
+	--fade-in-time: 1s;
+}
+
 /* Removing as background fade animation no longer used */
 /* body {
 	background-color: blue;
@@ -79,19 +88,52 @@ div.home4 {
 	transition-duration: 0.4s;
 	cursor: pointer;
 	position: relative;
-  }
+}
   
-  .button1 {
+.button1 {
 	background-color: white; 
 	color: black; 
 	border: 2px solid #af4c4c;
-  }
-  .button1:hover {
+}
+.button1:hover {
 	background-color: #af4c4c;
 	color: white;
-  }
+}
 
-  .li{
+.li{
 	float: left;
+}
 
-  }
+/* CSS Only Animations */
+.anim-fade {
+	opacity: 0;
+
+	transition: opacity var(--fade-in-time) linear;
+}
+.anim-end .anim-fade {
+	opacity: 1;
+}
+
+div.anim-left {
+	transform: translateX(calc(-1 * var(--slide-in-offset)));
+	opacity: 0;
+
+	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
+	transition-delay: var(--scroll-speed);
+}
+.anim-end div.anim-left {
+	transform: none;
+	opacity: 1;
+}
+
+div.anim-right {
+	transform: translateX(var(--slide-in-offset));
+	opacity: 0;
+
+	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
+	transition-delay: var(--scroll-speed);
+}
+.anim-end div.anim-right {
+	transform: none;
+	opacity: 1;
+}
