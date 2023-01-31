@@ -77,10 +77,13 @@ div.home4 {
 .button1 {
 	background-color: white; 
 	color: black; 
-	border: 2px solid #af4c4c;
+	border: 2px solid #d84f4f;
+	border-radius: 10000em;
+
+	transition: background-color 0.2s linear, color 0.2s linear;
 }
 .button1:hover {
-	background-color: #af4c4c;
+	background-color: #d84f4f;
 	color: white;
 }
 
