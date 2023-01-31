@@ -1,0 +1,46 @@
+/* CSS Only Animations */
+
+:root {
+	/* Animation parameters */
+	--slide-fade-in-time: 0.85s;
+	--slide-in-time: 1s;
+	--slide-in-offset: 1em;
+
+	--fade-in-time: 1s;
+}
+
+/* Fade in */
+.anim-fade {
+	opacity: 0;
+
+	transition: opacity var(--fade-in-time) linear;
+}
+.anim-end .anim-fade {
+	opacity: 1;
+}
+
+/* Slide and fade in from left */
+.anim-left {
+	transform: translateX(calc(-1 * var(--slide-in-offset)));
+	opacity: 0;
+
+	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
+	transition-delay: var(--scroll-speed);
+}
+.anim-end .anim-left {
+	transform: none;
+	opacity: 1;
+}
+
+/* Slide and fade in from right */
+.anim-right {
+	transform: translateX(var(--slide-in-offset));
+	opacity: 0;
+
+	transition: transform var(--slide-in-time) ease-out, opacity var(--slide-fade-in-time) linear;
+	transition-delay: var(--scroll-speed);
+}
+.anim-end .anim-right {
+	transform: none;
+	opacity: 1;
+}
