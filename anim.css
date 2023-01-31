@@ -2,11 +2,14 @@
 
 :root {
 	/* Animation parameters */
+
+	/* Fade in */
+	--fade-in-time: 1s;
+
+	/* Slide and fade in */
 	--slide-fade-in-time: 0.85s;
 	--slide-in-time: 1s;
 	--slide-in-offset: 0.75em;
-
-	--fade-in-time: 1s;
 }
 
 /* Fade in */
@@ -14,6 +17,7 @@
 	opacity: 0;
 
 	transition: opacity var(--fade-in-time) linear;
+	transition-delay: var(--scroll-speed);
 }
 .anim-end .anim-fade {
 	opacity: 1;
