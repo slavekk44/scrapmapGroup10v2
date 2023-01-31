@@ -66,7 +66,7 @@
 			</div>
 			
 			<!--Section 2-->
-			<div class="page-section home2" onscrollto="home2Fade();headerfade('#0000', '0')">
+			<div class="page-section home2" onscrollto="headerfade('#0000', '0')">
 				<div class="center vertcenter anim-left">
 					<div class="anim-left">
 						Discover Endless
@@ -79,7 +79,7 @@
 				</div>
 			</div>
 			<!--Section 3-->
-			<div class="page-section home3" onscrollto="bgfade('blue');hideFooter()">
+			<div class="page-section home3" onscrollto="hideFooter()">
 				<div class="center vertcenter">
 					<div class="anim-right">
 						Join us Now!
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 			<!--Section 4-->
-			<div class="page-section home4" onscrollto="bgfade('red');showFooter()">
+			<div class="page-section home4" onscrollto="showFooter()">
 				<div class="center vertcenter">
 					<h2 class="anim-fade">Our Values</h2>
 					<br>
@@ -98,7 +98,7 @@
 							Trust: To have deep and meaningful bonds in the company is vital for success,
 							our employees are expected to be able to maximise their relationships with both team members and clients.
 						</li>
-						<li class="anim-right" style="transition-delay: calc(var(--slide-in-time)*2 + 0.2s);">
+						<li class="anim-left" style="transition-delay: calc(var(--slide-in-time)*2 + 0.2s);">
 							Honesty: An immortal policy, we respect honesty to the highest degree
 							and make sure our work is done with the utmost integrity.
 						</li>
@@ -106,7 +106,7 @@
 							Diverse: We respect all our employees equally no matter their race,
 							culture or religion and celebrate having an open mindset.
 						</li>
-						<li class="anim-right" style="transition-delay: calc(var(--slide-in-time)*4 + 0.2s*3);">
+						<li class="anim-left" style="transition-delay: calc(var(--slide-in-time)*4 + 0.2s*3);">
 							Hardworking: No matter how difficult the task is ahead,
 							we charge through and complete work with urgency and accuracy.
 						</li>
@@ -114,7 +114,7 @@
 							Sustainable: Strategically making decisions we save resources such as energy,
 							time and money and efficiently utilise resources.
 						</li>
-						<li class="anim-right" style="transition-delay: calc(var(--slide-in-time)*6 + 0.2s*5);">
+						<li class="anim-left" style="transition-delay: calc(var(--slide-in-time)*6 + 0.2s*5);">
 							Learning: Our love for learning is never ending and we always make active approaches to develop skills
 							and find better ways to do our tasks.
 						</li>
@@ -144,12 +144,6 @@
 			let header = document.getElementById('header');
 
 			let footer = document.getElementsByClassName('footer')[0];
-
-			// Small test animation
-			function home2Fade() {
-				let elem = document.getElementById('home2-fade');
-				elem.classList.add('end');
-			}
 
 			// Fade page bg
 			function bgfade(col) {

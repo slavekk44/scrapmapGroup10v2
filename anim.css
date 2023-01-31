@@ -4,7 +4,7 @@
 	/* Animation parameters */
 	--slide-fade-in-time: 0.85s;
 	--slide-in-time: 1s;
-	--slide-in-offset: 1em;
+	--slide-in-offset: 0.75em;
 
 	--fade-in-time: 1s;
 }
