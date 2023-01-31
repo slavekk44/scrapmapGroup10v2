@@ -30,18 +30,6 @@ div.home1 {
 
 	font-size: 4em;
 }
-#home2-fade {
-	opacity: 0;
-	transition: all 1s ease-out;
-	position: relative;
-
-	left: -.2em;
-}
-#home2-fade.end {
-	opacity: 1;
-
-	left: 0;
-}
 
 div.home2 {
 	background-image: url("img/globe.jpg");
