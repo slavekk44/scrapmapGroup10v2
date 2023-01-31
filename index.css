@@ -94,14 +94,3 @@ div.home4 {
 	float: left;
 
   }
-
-  .wrapper2 {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-auto-rows: 600px;
-	margin-top: 3%;
-	padding: 10%;
-	padding-top: 0%;
-	text-align: center;
-	
-  }
