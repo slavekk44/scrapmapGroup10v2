@@ -63,6 +63,14 @@ div.home2 {
 	font-weight: bold;
 	font-size: 4em;
 }
+.home2-text{
+	font-size: 0.5em; 
+	color: rgba(249, 242, 242, 0.937); 
+	padding: 10%; 
+	padding-bottom: 3%;
+	padding-top: 3%;
+	
+}
 
 div.home3 {
 	background-attachment: fixed;
@@ -151,5 +159,8 @@ div.home4 {
 	}
 	div.home1-grid .home1-img img {
 		float: none;
+	}
+	.p {
+		font-size: 0.5;
 	}
 }
