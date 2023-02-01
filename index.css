@@ -121,6 +121,12 @@ div.home4 {
 	float: left;
 }
 
+@media screen and (min-width: 2000px) {
+	div.home1-grid {
+		width: 45%;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	div.home1-grid {
 		width: 90%;
@@ -133,8 +139,6 @@ div.home4 {
 	}
 	div.home1-grid {
 		grid-template-columns: auto;
-
-		width: 90%;
 	}
 	div.home1-grid > * {
 		text-align: center 	;
