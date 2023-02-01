@@ -160,7 +160,11 @@ div.home4 {
 	div.home1-grid .home1-img img {
 		float: none;
 	}
-	.p {
-		font-size: 0.5;
+	.home2-text{
+		font-size: 0.4em; 
+		padding: 15%; 
+		padding-bottom: 3%;
+		padding-top: 3%;
+		
 	}
 }
