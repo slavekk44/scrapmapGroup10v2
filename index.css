@@ -24,6 +24,36 @@ div.home1 {
 	font-size: 4em;
 }
 
+div.home1-grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	column-gap: 5vw;
+
+	width: 70%;
+
+	margin: auto;
+}
+
+div.home1-grid > * {
+	text-align: right;
+}
+
+div.home1 .page-logo {
+	min-width: max-content;
+	width: 100%;
+}
+
+div.home1 .home1-img {
+	grid-row-start: 1;
+	grid-row-end: 3;
+
+	grid-column: 2;
+}
+div.home1 .home1-img img {
+	width: 80%;
+	float: left;
+}
+
 div.home2 {
 	background-image: url("img/globe.jpg");
 	background-attachment: fixed;
@@ -89,4 +119,30 @@ div.home4 {
 
 .li{
 	float: left;
+}
+
+@media screen and (max-width: 1200px) {
+	div.home1-grid {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	div.home1-grid {
+		grid-template-columns: auto;
+
+		width: 100%;
+	}
+	div.home1-grid > * {
+		text-align: center 	;
+	}
+	div.home1-grid .home1-img {
+		grid-column: 1;
+		grid-row-start: 2;
+
+		margin: auto;
+	}
+	div.home1-grid .home1-img img {
+		float: none;
+	}
 }
