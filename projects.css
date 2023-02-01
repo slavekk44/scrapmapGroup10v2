@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 
-.grid-container {
-	position: relative;
+.wrapper2 {
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-column-gap: 4%;
-	grid-row-gap: 5%;
-	
-}
+	grid-template-columns: repeat(1, 1fr);
+  }
 
 .page-section > div.center {
 	width: 60%;
@@ -18,7 +14,7 @@ div.content-img {
 	
 }
 div.content-img > img {
-	width: 80%;
+	width: 100%;
 	display: block;
 	padding: 5%;
 	
@@ -89,3 +85,4 @@ h1.project-bg {
 	
 	
 }
+
