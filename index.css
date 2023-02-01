@@ -50,7 +50,7 @@ div.home1 .home1-img {
 	grid-column: 2;
 }
 div.home1 .home1-img img {
-	width: 80%;
+	max-width: 80%;
 	float: left;
 }
 
@@ -131,7 +131,7 @@ div.home4 {
 	div.home1-grid {
 		grid-template-columns: auto;
 
-		width: 100%;
+		width: 90%;
 	}
 	div.home1-grid > * {
 		text-align: center 	;
