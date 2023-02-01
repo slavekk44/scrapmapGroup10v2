@@ -12,10 +12,10 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: 600px;
 	margin-top: 3%;
-	padding: 10%;
 	padding-top: 0%;
 	text-align: center;
 	font-size: 15px;
+	padding: 10%;
 	
   }
 
@@ -73,6 +73,7 @@ img {
 		grid-auto-rows: 420px;
 		font-size: 12px;
 		margin-top: 7%;
+		padding: 15%;
 	}
 	
 	
