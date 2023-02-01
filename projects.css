@@ -86,3 +86,36 @@ h1.project-bg {
 	
 }
 
+@media screen and (max-width: 1200px) {
+	.project-text{
+		font-size:  1.6em;;
+		width: 90%;
+	}
+	h1.project-bg {
+		margin-top: 25vw;
+	}
+	div.content-img {
+		width: 90%;
+	
+	}
+
+	
+	
+}
+@media screen and (max-width: 800px) {
+	.project-text{
+		font-size:  1.3em;;
+		width: 95%;
+	}
+	h1.project-bg {
+		margin-top: 80vw;
+	}
+	div.content-img {
+		width: 100%;
+	
+	}
+
+
+	
+	
+}
